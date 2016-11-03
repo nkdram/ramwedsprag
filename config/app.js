@@ -28,7 +28,7 @@ module.exports =function(){
 // all environments
     app.set('port', process.env.PORT || 8079);
 
-     app.locals.title = 'Web Crawler';
+     app.locals.title = 'Ram Weds Pragatha';
 
     app.locals.jsFiles = config.getJavaScriptAssets();
     app.locals.cssFiles = config.getCSSAssets();

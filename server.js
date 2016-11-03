@@ -35,4 +35,4 @@ io.on('connection', function(socket) {
 exports = module.exports = app;
 
 // Logging initialization
-console.log('Web Crawler APP started on port 8079');
+console.log('RamWedsPragatha APP started on port 8079');
