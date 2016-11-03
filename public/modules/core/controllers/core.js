@@ -5,11 +5,11 @@
         console.log('INSIDE MAINCTRL');
         var INTERVAL = 10000,
             slides = [
-                {id: "image00", src: "/assets/modules/core/img/image00.jpg", title: 'Our love', subtitle: 'will prove everyone wrong!'},
-                {id: "image01", src: "/assets/modules/core/img/image01.jpg", title: 'Can you feel', subtitle: 'the love tonight!'},
-                {id: "image02", src: "/assets/modules/core/img/image02.jpg", title: 'You are the wind', subtitle: 'beneath my wings'},
-                {id: "image03", src: "/assets/modules/core/img/image03.jpg", title: 'Anything for you', subtitle: 'even accepting your family'},
-                {id: "image04", src: "/assets/modules/core/img/image04.jpg", title: 'True love', subtitle: 'a dream within a dream'}
+                {id: "image00", src: "/assets/modules/core/img/Heart.jpg", title: 'Our love', subtitle: 'will prove everyone wrong!'},
+                {id: "image01", src: "/assets/modules/core/img/shoot.jpg", title: 'Can you feel', subtitle: 'the love tonight!'},
+                {id: "image02", src: "/assets/modules/core/img/Soloram.jpg", title: 'You are the wind', subtitle: 'beneath my wings'},
+                {id: "image03", src: "/assets/modules/core/img/outdoorlight.jpg", title: 'Anything for you', subtitle: 'even accepting your family'},
+                {id: "image04", src: "/assets/modules/core/img/flower.jpg", title: 'True love', subtitle: 'a dream within a dream'}
             ];
 
         function setCurrentSlideIndex(index) {
