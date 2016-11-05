@@ -1,4 +1,7 @@
 <div data-ng-controller="MainCtrl">
+    <div class="col-xs-12" ng-if="progress !== 100">
+        <uib-progressbar class="progress-striped" value="progress">{{progress | number:0}}%</uib-progressbar>
+    </div>
 
     <div class="slide slide-animation" ng-if="isCurrentSlideIndex($index)"
          ng-show="loaded" ng-repeat="slide in slides">
