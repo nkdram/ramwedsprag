@@ -33,6 +33,7 @@ module.exports =function(){
     app.locals.jsFiles = config.getJavaScriptAssets();
     app.locals.cssFiles = config.getCSSAssets();
 
+    app.use('/assets', express.static(path.resolve('./public')));
     // Should be placed before express.static
     app.use(compress({
         // only compress files for the following content types
@@ -77,7 +78,6 @@ module.exports =function(){
         next();
     });*/
 
-    app.use('/assets', express.static(path.resolve('./public')));
 
     // Enable jsonp
     app.enable('jsonp callback');
