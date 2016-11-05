@@ -5,11 +5,11 @@
         console.log('INSIDE MAINCTRL');
         var INTERVAL = 10000,
             slides = [
-                {id: "image00", src: "/assets/modules/core/img/Optimized-Heart.jpg", title: 'Our love', subtitle: 'will prove everyone wrong!'},
-                {id: "image01", src: "/assets/modules/core/img/Optimized-shoot.jpg", title: 'Can you feel', subtitle: 'the love tonight!'},
-                {id: "image02", src: "/assets/modules/core/img/Optimized-Soloram.jpg", title: 'You are the wind', subtitle: 'beneath my wings'},
-                {id: "image03", src: "/assets/modules/core/img/Optimized-outdoorlight.jpg", title: 'Anything for you', subtitle: 'even accepting your family'},
-                {id: "image04", src: "/assets/modules/core/img/Optimized-flower.jpg", title: 'True love', subtitle: 'a dream within a dream'}
+                {id: "image00", src: "/assets/modules/core/img/Optimized-Heart.JPG", title: 'Our love', subtitle: 'will prove everyone wrong!'},
+                {id: "image01", src: "/assets/modules/core/img/Optimized-shoot.JPG", title: 'Can you feel', subtitle: 'the love tonight!'},
+                {id: "image02", src: "/assets/modules/core/img/Optimized-Soloram.JPG", title: 'You are the wind', subtitle: 'beneath my wings'},
+                {id: "image03", src: "/assets/modules/core/img/Optimized-outdoorlight.JPG", title: 'Anything for you', subtitle: 'even accepting your family'},
+                {id: "image04", src: "/assets/modules/core/img/Optimized-flower.JPG", title: 'True love', subtitle: 'a dream within a dream'}
             ];
 
         function setCurrentSlideIndex(index) {
