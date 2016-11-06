@@ -6,10 +6,11 @@
 
             var $ctrl = this;
             $ctrl.animationsEnabled = true;
-
+            $ctrl.isModalOpen = false;
             $ctrl.open = function (size, parentSelector) {
                 var parentElem = parentSelector ?
                     angular.element($document[0].querySelector('.modal-demo ' + parentSelector)) : undefined;
+                $ctrl.isModalOpen = true;
                 var modalInstance = $uibModal.open({
                     animation: $ctrl.animationsEnabled,
                     ariaLabelledBy: 'modal-title',
@@ -30,6 +31,7 @@
                     $ctrl.selected = selectedItem;
                 }, function () {
                     $log.info('Modal dismissed at: ' + new Date());
+                    $ctrl.isModalOpen = false;
                 });
             };
 

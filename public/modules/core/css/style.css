@@ -1,14 +1,19 @@
 
+body {
+    font-family: 'Tangerine', serif;
+    font-size: 24px;
+    color: #FFF;
+    font-weight: 400;
+}
+
 .mid-section
 {
     padding-top: 40px;
 
 }
 
-.signup
-{
+.signup{
     cursor: hand;
-
 }
 
 
@@ -41,8 +46,15 @@
     height:100%;
 }
 
+.vcenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
 .hero-menu {
-    background-color: rgba(245, 245, 245, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 15px;
     border-radius: 10px 10px 10px 10px;
 }
@@ -88,27 +100,12 @@
 
 /* Modal windows */
 
-/* .modal-fullscreen */
-
-/*.modal-lg {
-    background: transparent;
-}*/
 .modal-lg .modal-content {
     background: rgba(245, 245, 245, 0.3);
     border: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
-.modal-backdrop.modal-backdrop-fullscreen {
-    background: #ffffff;
-}
-/*.modal-backdrop.in {
-    opacity: .97;
-    filter: alpha(opacity=97);
-}*/
-
-/* .modal-fullscreen size: we use Bootstrap media query breakpoints */
-
 
 .modal-dialog.modal-lg{
     width: 100%;
@@ -123,3 +120,14 @@
     border-radius: 0;
 }
 
+button.close{
+    font-size: 40px;
+}
+
+.hero-menu button{
+    float: left;
+}
+.hero-menu p{
+    padding-left: 15px;
+    float: left;
+}
