@@ -37,6 +37,8 @@
                 $ctrl.animationsEnabled = !$ctrl.animationsEnabled;
             };
 
+
+
         }
     ]);
 })();

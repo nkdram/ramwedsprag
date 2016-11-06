@@ -44,7 +44,6 @@ angular.module('core').animation('.slide-animation', function ($window) {
 angular.module('core').directive('bgImage', function ($window) {
     return function (scope, element, attrs) {
         var resizeBG = function () {
-            console.log(element);
             var bgwidth = element.width();
             var bgheight = element.height();
 

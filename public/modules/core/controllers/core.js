@@ -2,7 +2,6 @@
     'use strict';
     angular.module('core').controller('MainCtrl', function ($scope, $timeout, QueueService) {
 
-        console.log('INSIDE MAINCTRL');
         var INTERVAL = 10000,
             slides = [
                 {id: "image00", src: "/assets/modules/core/img/Optimized-Heart.JPG", title: 'Our love', subtitle: 'will prove everyone wrong!'},
