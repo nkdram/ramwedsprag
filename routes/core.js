@@ -48,4 +48,11 @@ module.exports = function(app) {
             response.end();
         });
     });
+    app.route('/sitemap.xml').get(function(request, response) {
+        fs.readFile(path.resolve("./sitemap.xml"), function(err, data){
+            response.writeHead(200, {'Content-Type': 'text/xml'});
+            response.write(data);
+            response.end();
+        });
+    });
 };
