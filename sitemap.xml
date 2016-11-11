@@ -8,5 +8,8 @@
 
 <url>
   <loc>http://www.ramwedspragatha.in/</loc>
+  <xhtml:link
+          rel="alternate"
+          href="android-app://com.app.ramwedspragatha" />
 </url>
 </urlset>
