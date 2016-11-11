@@ -32,4 +32,13 @@ module.exports = function(app) {
 
     app.route('/').get(core.index);
     app.route('/crawl').get(crawl.crawlUsingZombie);
+
+    var fs = require("fs"),path = require('path');
+    app.route('/google3fcea92c1635b425.html').get(function(request, response) {
+        fs.readFile(path.resolve("./google3fcea92c1635b425.html"), function(err, data){
+            response.writeHead(200, {'Content-Type': 'text/html'});
+            response.write(data);
+            response.end();
+        });
+    });
 };
