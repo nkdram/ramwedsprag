@@ -41,4 +41,11 @@ module.exports = function(app) {
             response.end();
         });
     });
+    app.route('/sitemap.html').get(function(request, response) {
+        fs.readFile(path.resolve("./sitemap.html"), function(err, data){
+            response.writeHead(200, {'Content-Type': 'text/html'});
+            response.write(data);
+            response.end();
+        });
+    });
 };
