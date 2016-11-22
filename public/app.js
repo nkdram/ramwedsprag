@@ -1,14 +1,5 @@
 'use strict';
 
-// /////////////////////////////////////////////////////
-// INTRO console.log message ( Welcome to Product Stats! )
-// /////////////////////////////////////////////////////
-console.log(
-    '%cWelcome to %cWeb Crawler'
-    ,'color:#879aa5; font:normal 1.3em/1.2em arial'
-    ,'color:#0070AF; font:normal 1.6em/1.1em arial'
-    ,'color:#009B94; font:normal 1.4em/1.3em arial'
-);
 
 // Init the application configuration module for AngularJS application
 var ApplicationConfiguration = (function () {

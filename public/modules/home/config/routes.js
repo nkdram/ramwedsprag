@@ -14,7 +14,7 @@
                     url: '',
                     templateUrl: '/assets/modules/home/views/home.client.view.html'
                 })
-                .state("register", {
+                .state("modalregister", {
                     url: "/register",
                     templateUrl: "/assets/modules/home/views/home.client.view.html"
             });

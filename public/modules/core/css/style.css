@@ -6,6 +6,12 @@ body {
     font-weight: 400;
 }
 
+input,textarea
+{
+    font-size:20px;
+    color: #323133;
+}
+
 .mid-section
 {
     padding-top: 40px;

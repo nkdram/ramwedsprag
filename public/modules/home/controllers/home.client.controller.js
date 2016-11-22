@@ -11,6 +11,8 @@
                 $ctrl.state = {
                     name : param
                 };
+                $ctrl.state.name = $ctrl.state.name.indexOf('modal') > -1 ? $ctrl.state.name : ('modal'+$ctrl.state.name);
+                console.log($ctrl.state.name);
                 var parentElem = parentSelector ?
                     angular.element($document[0].querySelector('.modal-demo ' + parentSelector)) : undefined;
                 $ctrl.isModalOpen = true;
@@ -45,7 +47,10 @@
 
             //Open Pop up based on Route
             $ctrl.init = function(){
-                $ctrl.open('lg',$state.current.name);
+                if($state.current.name.indexOf('modal') > -1)
+                {
+                    $ctrl.open('lg',$state.current.name);
+                }
             };
 
 
