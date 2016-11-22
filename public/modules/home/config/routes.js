@@ -14,6 +14,10 @@
                     url: '',
                     templateUrl: '/assets/modules/home/views/home.client.view.html'
                 })
+                .state("register", {
+                    url: "/register",
+                    templateUrl: "/assets/modules/home/views/home.client.view.html"
+            });
 
         }
     ]);
