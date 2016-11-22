@@ -2,18 +2,41 @@
     <form class="form-horizontal" method="post" action="">
         <fieldset>
             <div class="row form-group">
+                <label class="col-md-2 control-label" for="first_name">First Name</label>
+                <div class="col-md-3">
+                    <div class="input-group">
+			<span class="input-group-addon">
+			<i class="glyphicon glyphicon-user"></i>
+			</span>
+                        <input id="first_name" name="first_name" placeholder="First Name" class="form-control input-md"
+                               type="text">
+                    </div>
+                </div>
+
+
+                <label class="col-md-2 control-label" for="last_name">Last Name</label>
+                <div class="col-md-3">
+                    <div class="input-group">
+			<span class="input-group-addon">
+			<i class="glyphicon glyphicon-user"></i>
+			</span>
+                        <input id="last_name" name="last_name" placeholder="Last Name" class="form-control input-md" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="row form-group">
                 <label class="col-md-2 control-label" for="email">Email</label>
-                <div class="col-md-2">
+                <div class="col-md-3">
                     <div class="input-group">
                         <span class="input-group-addon">
                             <i class="glyphicon glyphicon-envelope"></i>
                         </span>
-                        <input id="email"  name="email" placeholder="example@gmail.com"
+                        <input id="email"  name="email" placeholder="xxx@yyy.com"
                                class="form-control input-md">
                     </div>
                 </div>
                 <label class="col-md-2 control-label" for="mobile">Contact No</label>
-                <div class="col-md-2">
+                <div class="col-md-3">
                     <div class="input-group">
                         <span class="input-group-addon">
                         <i class="glyphicon glyphicon-phone"></i>
@@ -24,49 +47,7 @@
                 </div>
             </div>
             <div class="row form-group">
-                <label class="col-md-2 control-label" for="first_name">First Name</label>
-                <div class="col-md-2">
-                    <div class="input-group">
-			<span class="input-group-addon">
-			<i class="glyphicon glyphicon-user"></i>
-			</span>
-                   <input id="first_name" name="first_name" placeholder="" class="form-control input-md"
-                               type="text">
-                    </div>
-                </div>
-
-                <label class="col-md-2 control-label" for="middle_name">Mid Name</label>
-                <div class="col-md-2">
-                    <div class="input-group">
-			<span class="input-group-addon">
-			<i class="glyphicon glyphicon-user"></i>
-			</span>
-                        <input id="middle_name" name="middle_name" placeholder="" class="form-control input-md"
-                               type="text">
-                    </div>
-                </div>
-                <label class="col-md-2 control-label" for="last_name">Last Name</label>
-                <div class="col-md-2">
-                    <div class="input-group">
-			<span class="input-group-addon">
-			<i class="glyphicon glyphicon-user"></i>
-			</span>
-                        <input id="last_name" name="last_name" placeholder="" class="form-control input-md" type="text">
-                    </div>
-                </div>
-            </div>
-
-            <div class="row form-group">
-                <!--<label class="col-md-2 control-label" for="farmer_type">Farmer Type</label>
-                <div class="col-md-4">
-                    <label class="radio-inline"><input type="radio" name="farmer_type" value="Farmer"
-                                                       checked>Farmer</label>
-                    <label class="radio-inline"><input type="radio" name="farmer_type"
-                                                       value="Politician">Politician</label>
-                    <label class="radio-inline"><input type="radio" name="farmer_type" value="Retailer">Retailer</label>
-                    <label class="radio-inline"><input type="radio" name="farmer_type" value="Supplier">Supplier</label>
-                </div>-->
-
+              
                 <label class="col-md-2 control-label" for="description">Description</label>
                 <div class="col-md-3">
                     <div class="input-group">
@@ -77,20 +58,20 @@
                                   placeholder="Description"></textarea>
                     </div>
                 </div>
-            </div>
-            <!--<div class="form-group">
-                <label class="col-md-3 control-label" for="smartphone">Has Touchscreen Phone ?</label>
+                <label class="col-md-2 control-label" >Select Side</label>
                 <div class="col-md-3">
+                        <div class="cc-selector">
+                            <input id="ram" type="radio" name="side" value="ram" />
+                            <label class="drinkcard-cc ram"for="ram"></label>
+                            <input id="prag" type="radio" name="side" value="prag" />
+                            <label class="drinkcard-cc prag" for="prag"></label>
+                        </div>
+                 </div>
+            </div>
 
-                    <label class="radio-inline"><input type="radio" name="smartphone" value=true>Yes</label>
-                    <label class="radio-inline"><input type="radio" name="smartphone" value=false>No</label>
-                    <label class="radio-inline"><input type="radio" name="smartphone" value=null checked>Don't
-                        Know</label>
-                    </select>
-                </div>
-            </div>-->
 
 
         </fieldset>
     </form>
 </div>
+
