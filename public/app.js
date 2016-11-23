@@ -16,6 +16,7 @@ var ApplicationConfiguration = (function () {
         'dialogs.main',
         'ngTable',
         'ui.calendar',
+        'rzModule',
         'esri.map',
         'ui.select'
     ];

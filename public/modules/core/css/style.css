@@ -19,6 +19,18 @@ textarea:focus, input:focus {
 .input-group-addon{
     background: rgba(245, 245, 245, 0.3);
 }
+
+.rzslider .rz-bubble.rz-limit {
+    color: white;
+}
+.rzslider .rz-bubble {
+    color: bisque;
+}
+
+/*.hero-menu .btn-default{
+    background: rgba(245, 245, 245, 0.3);
+}*/
+
 .mid-section
 {
     padding-top: 40px;

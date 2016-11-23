@@ -15,6 +15,15 @@
 
 
 
+        $scope.slider = {
+            value: 'E',
+            options: {
+                stepsArray: '30th Jan,29th Jan,28th Jan'.split(',')
+            }
+        };
+
+
+
         var date = new Date();
         var d = date.getDate();
         var m = date.getMonth();
@@ -36,27 +45,7 @@
         $scope.alertOnEventClick = function( date, jsEvent, view){
             $scope.alertMessage = (date.title + ' was clicked ');
         };
-        /* alert on Drop */
-        $scope.alertOnDrop = function(event, delta, revertFunc, jsEvent, ui, view){
-            $scope.alertMessage = ('Event Droped to make dayDelta ' + delta);
-        };
-        /* alert on Resize */
-        $scope.alertOnResize = function(event, delta, revertFunc, jsEvent, ui, view ){
-            $scope.alertMessage = ('Event Resized to make dayDelta ' + delta);
-        };
-        /* add and removes an event source of choice */
-        $scope.addRemoveEventSource = function(sources,source) {
-            var canAdd = 0;
-            angular.forEach(sources,function(value, key){
-                if(sources[key] === source){
-                    sources.splice(key,1);
-                    canAdd = 1;
-                }
-            });
-            if(canAdd === 0){
-                sources.push(source);
-            }
-        };
+
 
         /* Change View */
         $scope.changeView = function(view,calendar) {
@@ -86,8 +75,6 @@
                 height: '100%',
                 editable: true,
                 eventClick: $scope.alertOnEventClick,
-                eventDrop: $scope.alertOnDrop,
-                eventResize: $scope.alertOnResize,
                 eventRender: $scope.eventRender,
                 defaultDate : new Date(2017, 0, 29, 17, 0),
                 viewRender: function(currentView){

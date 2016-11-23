@@ -20,7 +20,8 @@ module.exports = {
                 'public/lib/angular-busy/dist/angular-busy.min.css',
                 'public/lib/ng-table/dist/ng-table.css',
                 'public/lib/angular-ui-select/dist/select.min.css',
-                'public/lib/fullcalendar/dist/fullcalendar.css'
+                'public/lib/fullcalendar/dist/fullcalendar.css',
+                'public/lib/angularjs-slider/dist/rzslider.min.css'
             ],
             js: [
                 'public/lib/jquery/dist/jquery.js',
@@ -40,6 +41,7 @@ module.exports = {
                 'public/lib/angular-busy/dist/angular-busy.min.js',
                 'public/lib/ng-table/dist/ng-table.js',
                 'public/lib/angular-ui-calendar/src/calendar.js',
+                'public/lib/angularjs-slider/dist/rzslider.min.js',
                 //'https://js.arcgis.com/4.0beta3/',
                 //'public/lib/angular-esri-map/dist/angular-esri-map.js',
                 'public/lib/angular-ui-select/dist/select.min.js',

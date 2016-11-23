@@ -47,17 +47,22 @@
             <div class="row form-group">
 
                 <label class="col-md-2 control-label" for="description">Choose Dates</label>
-
-
-                <label class="col-md-2 control-label" >Select Side</label>
-                <div class="col-md-3">
-                        <div class="cc-selector">
-                            <input id="ram" type="radio" name="side" value="ram" title="Groom" />
-                            <label class="drinkcard-cc ram"for="ram" title="Groom"></label>
-                            <input id="prag" type="radio" name="side" value="prag" title="Bride" />
-                            <label class="drinkcard-cc prag" for="prag" title="Bride"></label>
-                        </div>
-                 </div>
+                    <div class="col-md-3">
+                        <rzslider rz-slider-model="slider.value"
+                                  rz-slider-options="slider.options"></rzslider>
+                        <p class="text-center">
+                            {{ slider.value.indexOf('30') > -1 ? '30th Jan' :  (slider.value + '- 30th, Jan')  }}
+                        </p>
+                    </div>
+                    <label class="col-md-2 control-label" >Select Side</label>
+                    <div class="col-md-3">
+                            <div class="cc-selector">
+                                <input id="ram" type="radio" name="side" value="ram" title="Groom" />
+                                <label class="drinkcard-cc ram"for="ram" title="Groom"></label>
+                                <input id="prag" type="radio" name="side" value="prag" title="Bride" />
+                                <label class="drinkcard-cc prag" for="prag" title="Bride"></label>
+                            </div>
+                     </div>
             </div>
 
 
