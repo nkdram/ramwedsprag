@@ -15,6 +15,7 @@ var ApplicationConfiguration = (function () {
         'ui.bootstrap',
         'dialogs.main',
         'ngTable',
+        'ui.calendar',
         'esri.map',
         'ui.select'
     ];

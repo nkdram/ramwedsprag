@@ -18,7 +18,6 @@
                     url: "/register",
                     templateUrl: "/assets/modules/home/views/home.client.view.html"
             });
-
         }
     ]);
 })();

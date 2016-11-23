@@ -52,8 +52,6 @@
                     $ctrl.open('lg',$state.current.name);
                 }
             };
-
-
         }
     ]);
 })();

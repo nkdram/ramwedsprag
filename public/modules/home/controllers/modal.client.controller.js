@@ -1,12 +1,9 @@
 (function () {
     'use strict';
 
-    angular.module('main').controller('ModalInstanceCtrl', function ($uibModalInstance, items) {
+    angular.module('main').controller('ModalInstanceCtrl', function ($uibModalInstance, items, $scope) {
         var $ctrl = this;
         $ctrl.items = items;
-        /*$ctrl.selected = {
-            item: $ctrl.items[0]
-        };*/
 
         $ctrl.ok = function () {
             $uibModalInstance.close($ctrl.selected.item);
