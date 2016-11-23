@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('main').controller('ModalInstanceCtrl', function ($uibModalInstance, items, $scope) {
+    angular.module('main').controller('ModalInstanceCtrl', function ($uibModalInstance, items, $scope,uiCalendarConfig, $compile) {
         var $ctrl = this;
         $ctrl.items = items;
 
@@ -12,5 +12,124 @@
         $ctrl.cancel = function () {
             $uibModalInstance.dismiss('cancel');
         };
+
+
+
+        var date = new Date();
+        var d = date.getDate();
+        var m = date.getMonth();
+        var y = date.getFullYear();
+
+        $scope.changeTo = 'Hungarian';
+        /* event source that pulls from google.com */
+
+        /* event source that contains custom events on the scope */
+        $scope.events = [
+            {title: 'Reception',start: new Date(2017, 0, 29, 17, 0),end: new Date(2017, 0, 29, 22, 30),allDay: false,className:['reception'],durationEditable :false
+                ,startEditable: false },
+            {title: 'Wedding',start: new Date(2017, 0, 30, 8, 0),end: new Date(2017, 0, 30, 22, 30),allDay: false, className:[ 'wedding'],durationEditable :false,startEditable: false},
+            {title: 'Reception',start: new Date(2017, 0, 29),allDay: true,className:['reception', 'allday'],durationEditable :false,startEditable: false},
+            {title: 'Wedding',start: new Date(2017, 0, 30),allDay: true,className:['wedding', 'allday'],durationEditable :false,startEditable: false}
+        ];
+
+        /* alert on eventClick */
+        $scope.alertOnEventClick = function( date, jsEvent, view){
+            $scope.alertMessage = (date.title + ' was clicked ');
+        };
+        /* alert on Drop */
+        $scope.alertOnDrop = function(event, delta, revertFunc, jsEvent, ui, view){
+            $scope.alertMessage = ('Event Droped to make dayDelta ' + delta);
+        };
+        /* alert on Resize */
+        $scope.alertOnResize = function(event, delta, revertFunc, jsEvent, ui, view ){
+            $scope.alertMessage = ('Event Resized to make dayDelta ' + delta);
+        };
+        /* add and removes an event source of choice */
+        $scope.addRemoveEventSource = function(sources,source) {
+            var canAdd = 0;
+            angular.forEach(sources,function(value, key){
+                if(sources[key] === source){
+                    sources.splice(key,1);
+                    canAdd = 1;
+                }
+            });
+            if(canAdd === 0){
+                sources.push(source);
+            }
+        };
+
+        /* Change View */
+        $scope.changeView = function(view,calendar) {
+            uiCalendarConfig.calendars[calendar].fullCalendar('changeView',view);
+        };
+        /* Change View */
+        $scope.renderCalender = function(calendar) {
+            if(uiCalendarConfig.calendars[calendar]){
+                uiCalendarConfig.calendars[calendar].fullCalendar('render');
+            }
+        };
+        /* Render Tooltip */
+        $scope.eventRender = function( event, element, view ) {
+            element.attr({'tooltip': event.title,
+                'tooltip-append-to-body': true});
+            $compile(element)($scope);
+        };
+        /* config object */
+        $scope.uiConfig = {
+            calendar:{
+                header: {
+                    left: 'prev,next',
+                    center: 'title',
+                    right: 'agendaWeek,agendaDay'
+                },
+                defaultView: 'agendaWeek',
+                height: '100%',
+                editable: true,
+                eventClick: $scope.alertOnEventClick,
+                eventDrop: $scope.alertOnDrop,
+                eventResize: $scope.alertOnResize,
+                eventRender: $scope.eventRender,
+                defaultDate : new Date(2017, 0, 29, 17, 0),
+                viewRender: function(currentView){
+                    var minDate = new Date(2017, 0, 29, 17, 0),
+                        maxDate = new Date(2017, 0, 30, 23, 0);
+
+                    var preBtn = $(".fc-prev-button"),nextBtn = $(".fc-next-button");
+                    var title = $('.fc-center h2');
+                    if(currentView.name === 'agendaDay' && currentView.start === minDate){
+                        title.val('RECEPTION');
+                    }
+                    else if(currentView.name === 'agendaDay' && currentView.start === maxDate){
+                        title.val('WEDDING');
+                    }
+                    // Past
+                    if (minDate >= currentView.start && minDate <= currentView.end) {
+                        preBtn.prop('disabled', true);
+                        preBtn.addClass('fc-state-disabled');
+                    }
+                    else {
+                        preBtn.removeClass('fc-state-disabled');
+                        preBtn.prop('disabled', false);
+                    }
+                    // Future
+                    if (maxDate >= currentView.start && maxDate <= currentView.end) {
+                        nextBtn.prop('disabled', true);
+                        nextBtn.addClass('fc-state-disabled');
+                    } else {
+                        nextBtn.removeClass('fc-state-disabled');
+                        nextBtn.prop('disabled', false);
+                    }
+                },
+                businessHours: {
+                    start:'08:00', /* Current Hour/Minute 24H format */
+                    end: '23:00', // 5pm? set to whatever
+                    dow: [0,1] // Day of week. If you don't set it, Sat/Sun are gray too
+                }
+            }
+        };
+
+
+        /* event sources array*/
+        $scope.eventSources = [$scope.events];
     });
 })();

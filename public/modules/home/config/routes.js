@@ -18,7 +18,7 @@
                     url: "/register",
                     templateUrl: "/assets/modules/home/views/home.client.view.html"
                 }).state("modalevent", {
-                    url: "/register",
+                    url: "/events",
                     templateUrl: "/assets/modules/home/views/home.client.view.html"
                 });
         }
