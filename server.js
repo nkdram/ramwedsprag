@@ -28,6 +28,46 @@ io.on('connection', function(socket) {
             socket.emit('crawlDone',{ result: result });
         });
     });
+
+
+
+    socket.on('sendEmail', function(data) {
+        /*var secretLink = speakeasy.generateSecret({length: 100});
+        var code = speakeasy.totp({
+            secret: secretLink.base32,
+            encoding: 'base32'
+        });
+        console.log('Inside Register');
+
+
+        var link = domain.domainName+"/#!/activate?uid="+secretLink.base32;
+        var fullName = data.donarData.firstName+' '+data.donarData.lastName;*/
+
+        var postmark = require('./controllers/postmark.mail.controller');
+
+
+        socket.emit('emailSent', {message: "", success: "Number is Already Registered!"});
+       /* postmark.sendMail(data.donarData.email,'Thanks for Registering - Please verify your emailID to Donate',fullName,link,
+            function() {
+                var donar = require('./controllers/donars.controller');
+                data.donarData.token = code;
+                data.donarData.link = secretLink.base32;
+                donar.registerDonar(data.donarData, function (err, data) {
+                    if (!err) {
+                        socket.emit('registered', {message: "", success: "Registered !!"});
+                    }
+                    else if (!data) {
+                        socket.emit('registered', {message: "Error During Registering"});
+                    }
+                    else {
+                        socket.emit('registered', {message: "", success: "Number is Already Registered!"});
+                    }
+                });
+            });*/
+        //sendSMS(data.phone_number, code, socket,
+
+        //});
+    });
 });
 
 

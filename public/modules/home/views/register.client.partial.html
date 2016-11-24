@@ -1,5 +1,5 @@
 <div class="container">
-    <form class="form-horizontal" method="post" action="">
+    <form class="form-horizontal" method="post" ng-submit="sendInvite()" novalidate name="signupForm">
         <fieldset>
             <div class="row form-group">
                 <label class="col-md-2 control-label" for="first_name">First Name</label>
@@ -9,16 +9,16 @@
 			<i class="glyphicon glyphicon-user"></i>
 			</span>
                     <input id="first_name" name="first_name" placeholder="First Name" class="form-control input-md"
-                               type="text">
+                               type="text" ng-model="data.firstname">
                     </div>
                 </div>
-                <label class="col-md-2 control-label" for="last_name">Last Name</label>
+                <label class="col-md-2 control-label" for="last_name" >Last Name</label>
                 <div class="col-md-3">
                     <div class="input-group">
 			<span class="input-group-addon">
 			<i class="glyphicon glyphicon-user"></i>
 			</span>
-                        <input id="last_name" name="last_name" placeholder="Last Name" class="form-control input-md" type="text">
+                        <input id="last_name" name="last_name" placeholder="Last Name" ng-model="data.lastname" class="form-control input-md" type="text">
                     </div>
                 </div>
             </div>
@@ -30,7 +30,7 @@
                             <i class="glyphicon glyphicon-envelope"></i>
                         </span>
                         <input id="email"  name="email" placeholder="xxx@yyy.com"
-                               class="form-control input-md">
+                               class="form-control input-md" ng-model="data.email">
                     </div>
                 </div>
                 <label class="col-md-2 control-label" for="mobile">Contact No</label>
@@ -40,7 +40,7 @@
                         <i class="glyphicon glyphicon-phone"></i>
                         </span>
                         <input id="mobile" maxlength="10" name="mobile" placeholder="xxxxxxxxxxxx"
-                               class="form-control input-md ac_mobile" type="number">
+                               class="form-control input-md ac_mobile" ng-model="data.mobile" type="number">
                     </div>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                 <label class="col-md-2 control-label" for="description">Choose Dates</label>
                     <div class="col-md-3">
                         <rzslider rz-slider-model="slider.value"
-                                  rz-slider-options="slider.options"></rzslider>
+                                  rz-slider-options="slider.options" ></rzslider>
                         <p class="text-center">
                             {{ slider.value.indexOf('30') > -1 ? '30th Jan' :  (slider.value + '- 30th, Jan')  }}
                         </p>
@@ -57,12 +57,23 @@
                     <label class="col-md-2 control-label" >Select Side</label>
                     <div class="col-md-3">
                             <div class="cc-selector">
-                                <input id="ram" type="radio" name="side" value="ram" title="Groom" />
+                                <input id="ram" type="radio" name="side" value="ram" title="Groom" ng-model="data.side" />
                                 <label class="drinkcard-cc ram"for="ram" title="Groom"></label>
-                                <input id="prag" type="radio" name="side" value="prag" title="Bride" />
+                                <input id="prag" type="radio" name="side" value="prag" title="Bride" ng-model="data.side" />
                                 <label class="drinkcard-cc prag" for="prag" title="Bride"></label>
                             </div>
                      </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="user-submit">
+                    <button type="submit"
+                            ng-disabled="signupForm.$invalid"
+                            class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Register
+                    </button>
+                    <button type="button" class="btn btn-warning" ng-click="cancel()"><i class="glyphicon glyphicon-minus"></i>
+                        Cancel</button>
+                </div>
             </div>
 
 

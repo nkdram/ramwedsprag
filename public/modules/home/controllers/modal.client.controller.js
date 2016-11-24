@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('main').controller('ModalInstanceCtrl', function ($uibModalInstance, items, $scope,uiCalendarConfig, $compile) {
+    angular.module('main').controller('ModalInstanceCtrl', function ($uibModalInstance, items, $scope,uiCalendarConfig, $compile,$location) {
         var $ctrl = this;
         $ctrl.items = items;
 
@@ -21,6 +21,26 @@
                 stepsArray: '30th Jan,29th Jan,28th Jan'.split(',')
             }
         };
+
+        var socket = io.connect();
+        $scope.data ={};
+
+        $scope.sendInvite = function () {
+            console.log($scope.data);
+            socket.emit("sendEmail", $scope.data);
+        };
+
+        socket.on("emailSent", function (data) {
+            /* $scope.crawlStatus = false;
+             $scope.logs = [];
+             // console.log(  data.result.html );
+             $scope.html =  { rawHtml : data.result.html };
+             if(!$scope.$$phase)
+             {
+             $scope.$apply();
+             }*/
+            alert(data);
+        });
 
 
 
