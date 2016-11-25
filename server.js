@@ -46,27 +46,16 @@ io.on('connection', function(socket) {
         var postmark = require('./controllers/postmark.mail.controller');
 
 
-        socket.emit('emailSent', {message: "", success: "Number is Already Registered!"});
-       /* postmark.sendMail(data.donarData.email,'Thanks for Registering - Please verify your emailID to Donate',fullName,link,
-            function() {
-                var donar = require('./controllers/donars.controller');
-                data.donarData.token = code;
-                data.donarData.link = secretLink.base32;
-                donar.registerDonar(data.donarData, function (err, data) {
-                    if (!err) {
-                        socket.emit('registered', {message: "", success: "Registered !!"});
-                    }
-                    else if (!data) {
-                        socket.emit('registered', {message: "Error During Registering"});
-                    }
-                    else {
-                        socket.emit('registered', {message: "", success: "Number is Already Registered!"});
-                    }
-                });
-            });*/
-        //sendSMS(data.phone_number, code, socket,
 
-        //});
+        if(data.email) {
+            postmark.sendMail(data.email, 'Thanks for Registering - Please verify your emailID to Donate', data.firstname, 'asdada',
+                function () {
+                    socket.emit('emailSent', {message: "", success: "Email Sent!"});
+                });
+        }
+        else {
+            socket.emit('emailSent', {message: "", success: "Please provide Email Id!"});
+        }
     });
 });
 

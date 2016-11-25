@@ -9,7 +9,9 @@ exports.sendMail = function(toAddress,subject,name,link,callBack){
         "From": "ramandpragatha@ramwedspragatha.in",
         "To": toAddress,
         "Subject": subject,
-        "HtmlBody": bodyText
+        "HtmlBody": bodyText,
+        "TrackOpens": true,
+        "TrackLinks": 'HtmlAndText'
     }, function (err, to) {
         if (err) {
             console.log(err);

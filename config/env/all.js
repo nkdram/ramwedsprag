@@ -21,7 +21,9 @@ module.exports = {
                 'public/lib/ng-table/dist/ng-table.css',
                 'public/lib/angular-ui-select/dist/select.min.css',
                 'public/lib/fullcalendar/dist/fullcalendar.css',
-                'public/lib/angularjs-slider/dist/rzslider.min.css'
+                'public/lib/angularjs-slider/dist/rzslider.min.css',
+                'public/lib/social-feed/css/jquery.socialfeed.css',
+                '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'
             ],
             js: [
                 'public/lib/jquery/dist/jquery.js',
@@ -42,6 +44,9 @@ module.exports = {
                 'public/lib/ng-table/dist/ng-table.js',
                 'public/lib/angular-ui-calendar/src/calendar.js',
                 'public/lib/angularjs-slider/dist/rzslider.min.js',
+                'public/lib/social-feed/js/codebird.js',
+                'https://cdnjs.cloudflare.com/ajax/libs/dot/1.1.0/doT.min.js',
+                'public/lib/social-feed/js/jquery.socialfeed.js',
                 //'https://js.arcgis.com/4.0beta3/',
                 //'public/lib/angular-esri-map/dist/angular-esri-map.js',
                 'public/lib/angular-ui-select/dist/select.min.js',
