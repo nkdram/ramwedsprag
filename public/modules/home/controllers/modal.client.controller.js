@@ -23,7 +23,7 @@
         };
 
         var domainName = $location.protocol() + "://" + $location.host() + ":" + $location.port();
-        var socket = io.connect();// io(domainName, {}).connect();
+        var socket = io();// io(domainName, {}).connect();
 
 
 
