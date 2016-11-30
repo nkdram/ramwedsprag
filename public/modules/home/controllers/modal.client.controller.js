@@ -22,7 +22,9 @@
             }
         };
 
-        var socket = io.connect();
+        var domainName = $location.protocol() + "://" + $location.host() + ":" + $location.port();
+        var socket =  io(domainName, {}).connect();//io.connect();
+
         $scope.data ={};
 
         $scope.sendInvite = function () {
