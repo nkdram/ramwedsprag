@@ -13,12 +13,12 @@ require('./config/passport')();
 var http = require('http');
 
 var httpServer = http.Server(app);
-var io = require('socket.io').listen(httpServer);
+var socketIo = require('socket.io');
 httpServer.listen(app.get('port'), function(){
     console.log("server listening on port", app.get('port'));
 });
 
-
+var io = socketIo(httpServer);
 
 
 io.on('connection', function(socket) {
