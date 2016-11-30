@@ -10,8 +10,8 @@ angular.module('main').directive('socialFeed', function() {
             element.socialfeed({
                 // FACEBOOK
                 facebook:{
-                    accounts: ['@Fiskens'],  //Array: Specify a list of accounts from which to pull wall posts
-                    limit: 10,                                   //Integer: max number of posts to load
+                    accounts: ['!Football'],  //Array: Specify a list of accounts from which to pull wall posts
+                    limit: 2,                                   //Integer: max number of posts to load
                     access_token: '1233971053335053|b740f18b768c655c90e8604885adad11'  //String: "APP_ID|APP_SECRET"
                 },
                 // TWITTER
@@ -47,7 +47,7 @@ angular.module('main').directive('socialFeed', function() {
                     </p> \
                     </article>',*/
                 //date_format: "ll",                              //String: Display format of the date attribute (see http://momentjs.com/docs/#/displaying/format/)
-                //date_locale: "en",                              //String: The locale of the date (see: http://momentjs.com/docs/#/i18n/changing-locale/)
+                date_locale: "en",                              //String: The locale of the date (see: http://momentjs.com/docs/#/i18n/changing-locale/)
                 moderation: function(content) {                 //Function: if returns false, template will have class hidden
                     return  (content.text) ? content.text.indexOf('fuck') == -1 : true;
                 },

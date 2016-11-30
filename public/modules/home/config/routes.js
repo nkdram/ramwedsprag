@@ -21,8 +21,8 @@
                     url: "/events",
                     templateUrl: "/assets/modules/home/views/home.client.view.html"
                 }).state("modalfeeds", {
-                    url: "/events",
-                    templateUrl: "/assets/modules/home/views/social-feed.client.view.html"
+                    url: "/feeds",
+                    templateUrl: "/assets/modules/home/views/home.client.view.html"
                 });
         }
     ]);
