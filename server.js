@@ -19,7 +19,8 @@ httpServer.listen(app.get('port'), function(){
 
 
 var io = require('socket.io').listen(httpServer);
-
+io.set("transports", ["xhr-polling"]);
+io.set("polling duration", 10);
 io.on('connection', function(socket) {
     console.log('socket.io connected');
     socket.on('crawl', function(data) {
