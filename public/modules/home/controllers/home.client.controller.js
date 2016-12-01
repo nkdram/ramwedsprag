@@ -1,8 +1,18 @@
 (function () {
     'use strict';
 
-    angular.module('main').controller('MainPageController', ['$scope','$uibModal','$log','$state',
-        function ($scope, $uibModal, $log, $state) {
+    angular.module('main').controller('MainPageController', ['$scope','$uibModal','$log','$state','MetaService','$rootScope',
+        function ($scope, $uibModal, $log, $state, MetaService, $rootScope) {
+
+
+            $rootScope.metaservice = MetaService;
+            $rootScope.metaservice.set(
+                "Ram Weds Pragatha","We are getting hitched !! "+
+                "Please save the date: 30/01/17 in Madurai, Tamil Nadu , India"+
+                " See the Invitation at http://www.ramwedspragatha.in",
+                "Ram weds Pragatha , Ram and Pragatha, This is site for our wedding, JAN 30 2017, 30 Jan," +
+                "Ramkumar Dhinakaran, Pragatha Mahendran"
+            );
 
             var $ctrl = this;
             $ctrl.animationsEnabled = true;

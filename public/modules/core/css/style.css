@@ -1,7 +1,7 @@
 
 body {
-    font-family: 'Tangerine', serif;
-    font-size: 24px;
+    font-family: 'Kaushan Script', serif;
+    font-size: 20px;
     color: #FFF;
     font-weight: 400;
 }
@@ -93,8 +93,8 @@ textarea:focus, input:focus {
 .xlarge {
     position: absolute;
     bottom: 50px;
-    font-family: 'Oswald', serif;
-    font-size: 248px;
+    font-family: 'Kaushan Script', serif;
+    font-size: 160px;
     color: #FFF; /* Fallback for older browsers */
     color: rgba(255, 255, 255, 0.3);
     width: 100%;
@@ -105,8 +105,8 @@ textarea:focus, input:focus {
 .title {
     position: absolute;
     bottom: 200px;
-    font-family: 'Tangerine', serif;
-    font-size: 196px;
+    font-family: 'Kaushan Script', serif;
+    font-size: 100px;
     color: #FFF;
     width: 100%;
 }
@@ -114,8 +114,8 @@ textarea:focus, input:focus {
 .subtitle {
     position: absolute;
     bottom: 100px;
-    font-family: 'Tangerine', serif;
-    font-size: 144px;
+    font-family: 'Kaushan Script', serif;
+    font-size: 80px;
     color: #FFF;
     width: 100%;
 }
