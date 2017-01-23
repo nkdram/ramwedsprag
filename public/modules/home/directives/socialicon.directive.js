@@ -8,7 +8,7 @@ angular.module('main').directive('socialIcon', function() {
         link: function(scope, element, attrs) {
 
             element.jsSocials({
-                url: "http://www.ramwedspragatha.com",
+                url: "http://www.ramwedspragatha.in",
                 text: "Ram Weds Pragatha , Jan 30th - Arunachalam Mahal, Madurai",
                 showCount: true,
                 showLabel: false,
