@@ -227,3 +227,7 @@ button.close{
 .modal-header {
     border-bottom: 0px;
 }
+
+div[social-feed-id = '1807060119514652_1807060999514564'] {
+    display: none;
+}
