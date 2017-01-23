@@ -7,41 +7,31 @@
                     <div class="hero-menu">
                         <div class="row">
                             <div class="col-md-4 col-sm-12 col-xs-12">
-                                 <button type="button" class="btn btn-default" ng-click="$ctrl.open('lg','invitation')"><span class="glyphicon glyphicon-modal-window">
+                                 <button type="button" class="btn btn-default" ng-click="$ctrl.open('lg','invitation')">
+                                     <span class="glyphicon glyphicon-modal-window">
                                  </span> </button>
                                  <p> Invitation </p>
                             </div>
                             <div class="col-md-4 col-sm-12 col-xs-12">
-                                <button type="button" class="btn btn-default" ng-click="$ctrl.open('lg','register')"><span class="glyphicon glyphicon-list-alt">
+                                <button type="button" class="btn btn-default" ng-click="$ctrl.open('lg','register')">
+                                    <span class="glyphicon glyphicon-list-alt">
                                 </span> </button>
                                 <p> Let us know your Plan </p>
                             </div>
                             <div class="col-md-4 col-sm-12 col-xs-12">
-                                <button type="button" class="btn btn-default" ng-click="$ctrl.open('lg','events')"><span class="glyphicon glyphicon-calendar">
+                                <button type="button" class="btn btn-default" ng-click="$ctrl.open('lg','events')">
+                                    <span class="glyphicon glyphicon-calendar">
                                 </span></button>
                                 <p> Block Your Calendar </p>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-4 col-sm-12 col-xs-12">
-                                <button type="button" class="btn btn-default" ng-click="$ctrl.open('lg','feeds')">
-                                    <span class="glyphicon glyphicon-barcode">
-                                </span></button>
-                                <p> Check out whats Happening !</p>
-                            </div>
-                            <div class="col-md-4 col-sm-12 col-xs-12">
-                                <button type="button" class="btn btn-default" ng-click="$ctrl.open('lg','invitation')"><span class="glyphicon glyphicon-barcode">
-                                </span></button>
-                                <p> Get Your Wedding Ticket !</p>
-                            </div>
-                            <div class="col-md-4 col-sm-12 col-xs-12">
-                                <button type="button" class="btn btn-default" ng-click="$ctrl.open('lg','invitation')"><span class="glyphicon glyphicon-barcode">
-                                </span></button>
-                                <p> Get Your Wedding Ticket !</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row" ng-if="!$ctrl.isModalOpen">
+            <div class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 vcenter">
+                <div class="social-feed-container" social-feed></div>
             </div>
         </div>
     </div>

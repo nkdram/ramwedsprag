@@ -10,6 +10,8 @@
              ng-include="'/assets/modules/home/views/events.client.partial.html'"></div>
         <div ng-if="$ctrl.items ? ($ctrl.items.name === 'modalfeeds') : false "
              ng-include="'/assets/modules/home/views/social-feed.client.partial.html'"></div>
+        <div ng-if="$ctrl.items ? ($ctrl.items.name === 'modalinvitation') : false "
+             ng-include="'/assets/modules/home/views/invitation.client.partial.html'"></div>
     </div>
     <div class="modal-footer">
 
