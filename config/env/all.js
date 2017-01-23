@@ -23,7 +23,9 @@ module.exports = {
                 'public/lib/fullcalendar/dist/fullcalendar.css',
                 'public/lib/angularjs-slider/dist/rzslider.min.css',
                 'public/lib/social-feed/css/jquery.socialfeed.css',
-                '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'
+                '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css',
+                'public/lib/jssocials/dist/jssocials.css',
+                'public/lib/jssocials/dist/jssocials-theme-classic.css'
             ],
             js: [
                 'public/lib/jquery/dist/jquery.js',
@@ -31,6 +33,7 @@ module.exports = {
                 'public/lib/social-feed/js/codebird.js',
                 'https://cdnjs.cloudflare.com/ajax/libs/dot/1.1.0/doT.min.js',
                 'public/lib/social-feed/js/jquery.socialfeed.js',
+                'public/lib/jssocials/dist/jssocials.min.js',
                 'public/lib/fullcalendar/dist/fullcalendar.min.js',
                 'public/lib/fullcalendar/dist/gcal.js',
                 'public/lib/angular/angular.js',

@@ -55,8 +55,10 @@
             };
 
 
+
             //Open Pop up based on Route
             $ctrl.init = function(){
+
                 if($state.current.name.indexOf('modal') > -1)
                 {
                     $ctrl.open('lg',$state.current.name);

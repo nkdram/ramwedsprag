@@ -10,7 +10,7 @@ angular.module('core').service('MetaService', function() {
             title = newTitle;
         },
         metaTitle: function(){ return title; },
-        metaDescription: function() { console.log(description) ; return description; },
-        metaKeywords: function() { console.log(keywords) ; return keywords; }
+        metaDescription: function() { return description; },
+        metaKeywords: function() {  return keywords; }
     }
 });
