@@ -11,7 +11,7 @@ angular.module('main').directive('socialFeed', function() {
                 // FACEBOOK
                 facebook:{
                     accounts: ['@ramwedspragatha'],  //Array: Specify a list of accounts from which to pull wall posts
-                    limit: 2,                                   //Integer: max number of posts to load
+                    limit: 10,                                   //Integer: max number of posts to load
                     access_token: '1233971053335053|b740f18b768c655c90e8604885adad11'  //String: "APP_ID|APP_SECRET"
                 },
                 // TWITTER
@@ -24,7 +24,7 @@ angular.module('main').directive('socialFeed', function() {
                 // GOOGLEPLUS
                 google:{
                     accounts: ['#ramwedspragatha'],                //Array: Specify a list of accounts from which to pull posts
-                    limit: 2,                                  //Integer: max number of posts to load
+                    limit: 10,                                  //Integer: max number of posts to load
                     access_token: 'AIzaSyBdJGomM-tc0aQnk9jEOAaqJD8niysPGeM'//String: G+ access token
                 },
                 /*// INSTAGRAM

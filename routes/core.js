@@ -55,4 +55,12 @@ module.exports = function(app) {
             response.end();
         });
     });
+
+    app.route('/robots.txt').get(function(request, response) {
+        fs.readFile(path.resolve("./robots.txt"), function(err, data){
+            response.writeHead(200, {'Content-Type': 'text/txt'});
+            response.write(data);
+            response.end();
+        });
+    });
 };
