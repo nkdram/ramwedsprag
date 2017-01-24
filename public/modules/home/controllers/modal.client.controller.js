@@ -1,7 +1,8 @@
 (function () {
     'use strict';
 
-    angular.module('main').controller('ModalInstanceCtrl', function ($uibModalInstance, items, $scope,uiCalendarConfig, $compile,$location) {
+    angular.module('main').controller('ModalInstanceCtrl', function ($uibModalInstance, items, $scope,uiCalendarConfig,
+                                                                     $compile,$location,$http) {
         var $ctrl = this;
         $ctrl.items = items;
 
@@ -138,5 +139,33 @@
 
         /* event sources array*/
         $scope.eventSources = [$scope.events];
+
+
+        $scope.addresses = [];
+        $scope.credentials = {};
+        $scope.initMap = {};
+        $scope.refreshAddresses = function(address) {
+            var params = {address: address, sensor: false};
+            return $http.get(
+                'http://maps.googleapis.com/maps/api/geocode/json',
+                {params: params}
+            ).then(function(response) {
+                    $scope.addresses = response.data.results;
+                    if($scope.addresses && $scope.addresses.length === 1)
+                    {
+                        $scope.credentials.addressComponent = $scope.addresses[0];
+                    }
+                    if($scope.credentials.addressComponent)
+                    {
+                        $scope.location = $scope.credentials.addressComponent.geometry.location;
+                    }
+                });
+        };
+
+        $scope.loadMap = function () {
+            var elem = angular.element(document.querySelector('#way'));
+            angular.element(elem).html('');
+            $scope.$broadcast('loadMap', $scope.credentials.addressComponent.formatted_address);
+        }
     });
 })();

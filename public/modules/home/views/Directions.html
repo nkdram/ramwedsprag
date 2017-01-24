@@ -1,0 +1,49 @@
+<div class="content">
+
+    <div class="row">
+        <div class="form-group col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1">
+            <label> <code>
+                Get direction from your location or address to Marriage Hall - Arunachalam Mahal, Kamarajar Salai, Madurai
+            </code></label>
+            <small> Please type area, city , zipcode</small><br/>
+            <p>{{credentials.addressComponent.formatted_address}}
+                [lat: {{credentials.addressComponent.geometry.location.lat}},
+                lng: {{credentials.addressComponent.geometry.location.lng}}]</p>
+            <ui-select ng-model="credentials.addressComponent"
+                       theme="bootstrap"
+                       reset-search-input="false"
+                   class="col-md-10 col-xs-10" >
+                <ui-select-match placeholder="Enter an address...">
+                    {{$select.selected.formatted_address}}</ui-select-match>
+                <ui-select-choices repeat="address in addresses | filter: $select.search track by $index"
+                                   refresh="refreshAddresses($select.search)"
+                                   refresh-delay="0">
+                    <div ng-bind-html="address.formatted_address"></div>
+                </ui-select-choices>
+            </ui-select>
+            <button type="button" class="btn btn-default" ng-click="loadMap()">
+                                    <span class="glyphicon glyphicon-repeat" title="Get Direction">
+         </span></button>
+        </div>
+
+    </div>
+
+
+        <div id="map" class="center-block" style="width: 80%;height: 80% min-width: 600px;
+    min-height: 600px;"  google-map ></div>
+    <div id="way" class="col-md-8 col-md-offset-2" style="background-color: rgba(255,255,255,0.8);border-radius: 10px;
+     margin-top: 10px;"  ></div>
+</div>
+
+
+<style>
+    span.ui-select-toggle{
+        overflow: hidden;
+        font-size: 16px;
+    }
+
+    .modal-footer {
+        border-top: 0px;
+    }
+
+</style>
