@@ -34,8 +34,6 @@ angular.module('main').directive('socialIcon', function() {
                         logo:"fa fa-phone"
                     }]
             });
-
-            $('.fa.fa-google').addClass('fa-google-plus-square');
         }
     };
 });

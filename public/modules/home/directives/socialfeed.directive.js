@@ -55,6 +55,7 @@ angular.module('main').directive('socialFeed', function() {
                     console.log("All posts collected!");
                 }
             });
+
         }
     };
 });
