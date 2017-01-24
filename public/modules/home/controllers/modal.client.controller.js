@@ -23,7 +23,7 @@
             }
         };
 
-        var domainName = 'http://' + $location.host() ;
+        var domainName = 'https://' + $location.host() ;
         domainName += $location.port() ?  ":" + $location.port() : '';
         console.log(domainName);
         var socket = new io(domainName);// io(domainName, {}).connect();
