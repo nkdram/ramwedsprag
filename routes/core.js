@@ -63,4 +63,20 @@ module.exports = function(app) {
             response.end();
         });
     });
+
+    app.route('/.well-known/acme-challenge/YhKDxVlEaiaxGKkaTG2ui6VwVQdD1DmYRa9XGdiuxPE').get(function(request, response) {
+        fs.readFile(path.resolve("./.well-known/acme-challenge/YhKDxVlEaiaxGKkaTG2ui6VwVQdD1DmYRa9XGdiuxPE"), function(err, data){
+            response.writeHead(200, {'Content-Type': 'text/txt'});
+            response.write(data);
+            response.end();
+        });
+    });
+
+    app.route('/.well-known/acme-challenge/nIu50tFCubdXC4yJ0yjaNIxR1DIn37OlD7s3_x4Pd14').get(function(request, response) {
+        fs.readFile(path.resolve("./.well-known/acme-challenge/nIu50tFCubdXC4yJ0yjaNIxR1DIn37OlD7s3_x4Pd14"), function(err, data){
+            response.writeHead(200, {'Content-Type': 'text/txt'});
+            response.write(data);
+            response.end();
+        });
+    });
 };
